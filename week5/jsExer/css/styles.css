@@ -1,0 +1,35 @@
+#btt {
+  background-color: #88B;
+  border: solid;
+  border-width: 2px;
+  color: black;
+  padding: 10px 32px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "helvetica";
+}
+
+#img0, #img1, #img2 {
+  width: 30%;
+}
+
+#img1, #img2 {
+  opacity: 0.1;
+}
+
+.bttn{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.images {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}

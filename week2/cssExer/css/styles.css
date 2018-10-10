@@ -1,0 +1,100 @@
+/**
+
+Communications Lab - Fall 2018 | IMA | NYU Shanghai
+
+_____
+Steps
+
+*1: Add a different background color to each div so that you can see the area of the div more clearly.
+*2: Take out all invisible default margins first.
+*3: Adjust the width and height of the larger divs first.
+*4: Then, fine-tune the small divs' properties. (width, height, margin, etc.)
+5: Play with the layout, changing flex containers' properties.
+6: Make a final decision with the heights of the divs.
+7: When you are happy with the layout, remove the background randomly given.
+
+_____
+Properties for the flex container
+
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+
+Visit the website below and try the properties and values.
+https://www.w3schools.com/css/css3_flexbox.asp
+
+**/
+h1,a,p{
+  font-family: "Helvetica";
+}
+
+p{
+  color: #777;
+}
+
+a {
+  color: #777;
+  /* font-size: 18px; */
+}
+
+p {
+  /* font-size: 20px; */
+}
+
+a:hover{
+  color: #00F;
+}
+
+.header, .navigation, .content, .footer {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.header{
+  width: 100%;
+	height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation{
+  float: left;
+  flex-wrap: wrap;
+  top: 150px;
+  width: 20%;
+  height: calc(100% - 150px);
+  align-content: flex-start;
+  flex-direction: column;
+}
+
+.navi-box{
+  margin: 10px;
+}
+
+.content{
+  flex-wrap: wrap;
+  height: calc(100% - 150px);
+  align-content: flex-start;
+  width: 80%;
+}
+
+.content-box{
+  width: 150px;
+	height: 100px;
+  margin: 15px;
+  background-color: #EEE;
+}
+
+.footer{
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  font-family: "Helvetica";
+  clear: both;
+  /* background-color: #F00; */
+}

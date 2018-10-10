@@ -1,0 +1,35 @@
+.circle{
+  position: absolute;
+  display: block;
+  /* display: block; */
+  opacity: 0.5;
+  /* animation: circleAround 2s infinite alternate, fall 12s infinite linear, leftRight 1s infinite alternate; */
+  animation: circleAround 2s infinite alternate, leftRight 1s infinite alternate;
+  animation: circleAround 2s infinite alternate, leftRight 1s infinite alternate;
+}
+
+body, html{
+  height: 100%;
+}
+
+@keyframes fall {
+  to{
+    top: 100%;
+  }
+}
+
+@keyframes circleAround {
+  from{
+    transform: rotateY(-45deg);
+  }
+  to{
+    /* transform: rotateY(360deg); */
+    transform: rotateY(45deg);
+  }
+}
+
+@keyframes leftRight {
+  to{
+    margin-left: 0px;
+  }
+}
