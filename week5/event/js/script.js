@@ -47,13 +47,32 @@ function removeImg() {
   document.body.removeChild(oI);
         }
 
-function playBGM(){
+window.onload = function playBGM(){
   if (BGMusic.paused == true){
     BGMusic.play();
   }
   else {
     BGMusic.pause();
   }
-  document.body.getElementsByTagName("img")[0].style.left = "0px";
-  document.body.getElementsByTagName("img")[0].style.top = "0px";
+  // document.body.getElementsByTagName("img")[0].style.left = "0px";
+  // document.body.getElementsByTagName("img")[0].style.top = "0px";
+}
+
+
+
+var myTimeout = setTimeout(timeoutFunction, 1000);
+
+function timeoutFunction() {
+  console.log("timeout started");
+}
+var myInterval = setInterval(intervalFunction, 2000);
+function intervalFunction() {
+  console.log("interval started");
+}
+var stp = document.getElementById('stopper');
+stp.addEventListener("click",clicked);
+
+function clicked(e) {
+  clearTimeout(myTimeout);
+  clearInterval(myInterval);
 }

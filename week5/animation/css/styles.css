@@ -1,3 +1,7 @@
+body, html{
+  height: 100%;
+}
+
 .circle{
   position: absolute;
   display: block;
@@ -6,10 +10,6 @@
   /* animation: circleAround 2s infinite alternate, fall 12s infinite linear, leftRight 1s infinite alternate; */
   animation: circleAround 2s infinite alternate, leftRight 1s infinite alternate;
   animation: circleAround 2s infinite alternate, leftRight 1s infinite alternate;
-}
-
-body, html{
-  height: 100%;
 }
 
 @keyframes fall {
