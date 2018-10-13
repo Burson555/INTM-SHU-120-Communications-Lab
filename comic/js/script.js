@@ -116,7 +116,7 @@ function treasure(){
     var div = document.createElement("DIV");
     div.className = "coin";
 
-    // giving the random size
+    // giving a random size
     var size = Math.random() * 40 + 25;
     div.style.width = (size + 1) + "px";
     div.style.height = (size + 1) + "px";
@@ -129,16 +129,16 @@ function treasure(){
     // div.backgroundImage = img;
     div.append(img);
 
-    // giving the random color
+    // giving a random color
     var colorNum = Math.floor(Math.random() * colors.length);
     div.style.backgroundColor = colors[colorNum];
     // div.style.backgroundColor = "red";
 
-    // giving the random position
+    // giving a random position
     div.style.left = Math.random() * window.innerWidth * 0.9 + "px";
     div.style.top = Math.random() * window.innerHeight + 100 + "px";
 
-    // making differet circles to fall at differe time
+    // making differet coins to rotate at differe time
     div.style.animationDelay = Math.random()*5 + "s";
 
     // vibrating from left to right
