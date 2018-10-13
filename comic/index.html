@@ -1,15 +1,3 @@
-<!-- Problems to solve:
-  1. position: relative || absolute
-     relative elements: pop up bubbles
-                        Jack walking effects
-
-  2.
-
-
--->
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,18 +53,21 @@
         <button class = "btt" onclick="play4()"><b>BGM4</b></button>
         </b>
       </div>
-    <audio id = "BGM1">
-        <source src="audio/bgm1.mp3" type="audio/mpeg">
-    </audio>
-    <audio id = "BGM2">
-        <source src="audio/bgm2.mp3" type="audio/mpeg">
-    </audio>
-    <audio id = "BGM3">
-        <source src="audio/bgm3.mp3" type="audio/mpeg">
-    </audio>
-    <audio id = "BGM4">
-        <source src="audio/bgm4.mp3" type="audio/mpeg">
-    </audio>
+      <div id = "BGDBox">
+        <b><i><p id = "BGD">Once upon a time, there was a young boy named Jack, living on a small island. One day, his mother is struck with a detrimental virus. In order to cover for her medical expenses, Jack must seek for treasures and gold. After obtaining a map of the Poseidon island from his great-grand father, who was once a great captain, Jack embarks on his journey onto the island of Poseidon to seek for treasure…</p></i></b>
+      </div>
+      <audio id = "BGM1">
+          <source src="audio/bgm1.mp3" type="audio/mpeg">
+      </audio>
+      <audio id = "BGM2">
+          <source src="audio/bgm2.mp3" type="audio/mpeg">
+      </audio>
+      <audio id = "BGM3">
+          <source src="audio/bgm3.mp3" type="audio/mpeg">
+      </audio>
+      <audio id = "BGM4">
+          <source src="audio/bgm4.mp3" type="audio/mpeg">
+      </audio>
       <!-- ********** END BGM selection ********** -->
       <!-- ********** START page selection ********** -->
       <div id="links">
@@ -98,15 +89,19 @@
   <!-- START to page 2 ******************** -->
 
   <div class="box">
-    <div id="page2">
-      ******************************************
+    <div id = "page2">
+      <div id = "pirateBox">
+        <img id = "pirate" src="img/pirate.jpg" alt="Ooooops">
+      </div>
     </div>
   </div>
   <!-- END to page 2 ******************** -->
 
   <!-- START to page 3 ******************** -->
-  <div class="box" onclick="showPosition()">
+  <div class="box">
     <div id="page3">
+      <!-- ******sparkle on skull's eye of treasure box-->
+      <img id="sparkle" src="img/Sparkle-PNG-Clipart.png" width="15px" alt="Ooooops" onclick="sparkling()">
       <div id="back">
           <img src="img/back.png" width="48px" alt="Ooooops!">
       </div>
@@ -115,11 +110,11 @@
   <!-- END to page 3 ******************** -->
 
   <!-- START to page 4 ******************** -->
-  <div class="box">
+  <div class="box" id = "box4">
     <div id="page4">
-      ******************************************
       <div id="death">
-
+      </div>
+      <div id="treasure" onclick="treasure()">
       </div>
     </div>
   </div>

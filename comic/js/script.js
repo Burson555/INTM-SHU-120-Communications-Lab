@@ -109,9 +109,61 @@ function removeImg() {
 }
 // *************** END swim Function ***************
 
-function showPosition(){
-  // this function only workds inside div
-  var x = event.clientX;
-  var y = event.clientY;
-  console.log("x: "+x+" y: "+y);
+// *************** START treasure pop up ***************
+var colors = ["red","hotpink","blue","green","yellow","purple"];
+function treasure(){
+  for (var i = 0; i < 80; i++){
+    var div = document.createElement("DIV");
+    div.className = "coin";
+
+    // giving the random size
+    var size = Math.random() * 40 + 25;
+    div.style.width = (size + 1) + "px";
+    div.style.height = (size + 1) + "px";
+    div.style.borderRadius = "50%";
+
+    // inserting the coin photo
+    var img = document.createElement("IMG");
+    img.style.width = size + "px";
+    img.src = "img/coin.png";
+    // div.backgroundImage = img;
+    div.append(img);
+
+    // giving the random color
+    var colorNum = Math.floor(Math.random() * colors.length);
+    div.style.backgroundColor = colors[colorNum];
+    // div.style.backgroundColor = "red";
+
+    // giving the random position
+    div.style.left = Math.random() * window.innerWidth * 0.9 + "px";
+    div.style.top = Math.random() * window.innerHeight + 100 + "px";
+
+    // making differet circles to fall at differe time
+    div.style.animationDelay = Math.random()*5 + "s";
+
+    // vibrating from left to right
+    // var marginLeft = Math.random() * 100 +25;
+    var marginLeft = 25;
+    div.style.marginLeft = marginLeft + "px";
+
+    document.getElementById("box4").append(div);
   }
+}
+// *************** END treasure pop up ***************
+
+// *************** START click eye and pop up image ***************
+var counter = 1;
+function sparkling(){
+  if (counter == 1) {
+    var newImg = document.createElement("IMG");
+    newImg.src = "img/eye.png";
+    newImg.className = "sparkling";
+    document.getElementById ("page3").appendChild(newImg);
+    counter = counter - 1;
+  }
+}
+function showimage(){
+  document.getElementById("sparkling");
+  document.body.append(sparkling);
+}
+// *************** END click eye and pop up image ***************

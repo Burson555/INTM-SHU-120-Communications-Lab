@@ -24,7 +24,7 @@ img {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	border: dotted;
+	/* border: dotted; */
 
 	display: flex;
 	flex-direction: row;
@@ -36,24 +36,57 @@ img {
 }
 /* ************** END box container ****************** */
 
-/* ************** START BGM ****************** */
-/* each page is put into a box container */
+/* ************** START intro box ****************** */
+#intro {
+	height: 670px;
+  width: 500px;
+	border: solid 2px grey;
+}
+/* background container */
+#BGDBox {
+	width: 500px;
+	height: auto;
+	border: solid 2px white;
+	position: relative;
+	top: 60px;
+}
+/* text of background */
+#BGD {
+	width: 320px;
+	position: relative;
+	left: 100px;
+	font-family: "Comic Sans MS";
+	font-size: 20px;
+}
+/* page selector */
+#links {
+	font-family: Arial;
+	position: relative;
+	width: 280px;
+	left: 120px;
+	top: 148px;
+	/* border: solid 2px green; */
+	align-items: center;
+}
+/* ************** END intro box ****************** */
+
+
+/* ************** START BGM button ****************** */
 #BGM {
 	/* align-items: center; */
 	width: 320px;
 	position: relative;
-	top: 3px;
+	top: 12px;
 	left: 100px;
 }
 .btt {
 	background-color: hotpink;
 	border: solid 2px hotpink;
-	/* margin: 3px; */
 	padding: 3px;
 	width: 72px;
 	font-size: 15px;
 }
-/* ************** END BGM ****************** */
+/* ************** END BGM button ****************** */
 
 /* ************** START set pages ****************** */
 #page1, #page2, #page3, #page4 {
@@ -114,7 +147,8 @@ img {
 }
 /* ************** END story name ****************** */
 
-/* ************** START to page 2 ****************** */
+/* ************** START swim destination **************** */
+/* when users click on Poseidon's island, jump to second page */
 #island1, #island2, #island3, #island4{
 	opacity: 0;
 	/* opacity: 1; */
@@ -151,28 +185,28 @@ img {
 	bottom: 0;
 	background-color: blue;
 }
-/* ************** END to page 2 ****************** */
+/* ************** END swim destination  **************** */
 
-/* ************** START intro box ****************** */
-#intro {
-	height: 670px;
-  width: 500px;
-	border: solid 2px red;
-}
-
-#links {
-	font-family: Arial;
+/* ************** START show pirate ****************** */
+/* hover the cursor and a photo of real pirate show up */
+#pirateBox {
+	width: 230px;
+	height: 400px;
 	position: relative;
-	width: 280px;
-	left: 120px;
-	top: 618px;
-	/* border: solid 2px green; */
-	align-items: center;
+	left: 410px;
+	top: 10px;
 }
-/* ************** END intro box ****************** */
+#pirate {
+	width: 230px;
+	opacity: 0;
+}
+#pirate:hover {
+	opacity: 1;
+}
+/* ************** END show pirate  **************** */
 
 /* ************** START Jack walking away ****************** */
-
+/* just a simple animation */
 #back{
   position: absolute;
   display: block;
@@ -185,7 +219,7 @@ img {
 
 @keyframes go {
   to{
-		transform: translate(125px, -27%) scale(0.5);
+	transform: translate(100px, -40%) scale(0.5);
   }
 }
 
@@ -193,17 +227,71 @@ img {
 
 
 /* ************** START to page 4 ****************** */
+/*  background color change on villain's death */
 #death {
 	position: absolute;
 	bottom: 13px;
 	left: 6px;
 	width: 214px;
 	height: 240px;
-	background-color: red;
+	background-color: #D22;
 	opacity: 0;
-
 }
 #death:hover{
+	opacity: 0.7;
+}
+
+/* treasure box shining effects */
+/* after users click the "shining" treasure box, coins pop up */
+#treasure {
+	position: relative;
+	top: 732px;
+	left: 274px;
+	width: 110px;
+	height: 24px;
+	background-color: yellow;
 	opacity: 0.6;
+	animation: changeC 2.4s infinite alternate;
+}
+@keyframes changeC {
+	0%	{background-color: red;}
+	20%	{background-color: green;}
+	40% {background-color: yellow;}
+	60% {background-color: blue;}
+	80%	{background-color: hotpink;}
+	100%	{background-color: purple;}
+}
+@keyframes rotate {
+  from{
+    transform: rotateY(-180deg);
+  }
+  to{
+    transform: rotateY(180deg);
+  }
+}
+.coin{
+  position: absolute;
+  display: block;
+  /* display: block; */
+  /* background-image: url("../img/coin.png"); */
+  opacity: 0.5;
+	animation: rotate 3s infinite alternate;
 }
 /* ************** END to page 4 ****************** */
+
+/* ************** START sparkling eye zooms in on treasure ************** */
+#sparkle {
+ position: absolute;
+ top: 485px;
+ left:365px;
+ right: 200px;
+}
+.sparkling{
+ position: absolute;
+ width:330px;
+ margin-left: 700px;
+ margin-right: 700px;
+ bottom: 170px;
+ height: 320px;
+}
+/* ************** END sparkling eye zooms in on treasure ************** */
