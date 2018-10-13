@@ -92,9 +92,9 @@ function swim(){
   img.style.width = "80px";
   img.className = "temp";
 
-  img.style.left = x - 40 + "px";
-  img.style.top = y - 60 + "px";
-  document.body.append(img);
+  img.style.left = x - 193 + "px";
+  img.style.top = y - 70 + "px";
+  document.getElementById("page1").append(img);
 
   if (hasImg == true){
   removeImg();
@@ -105,7 +105,7 @@ function swim(){
 
 function removeImg() {
   var oI = document.body.getElementsByClassName("temp")[0];
-  document.body.removeChild(oI);
+  document.getElementById("page1").removeChild(oI);
 }
 // *************** END swim Function ***************
 

@@ -16,7 +16,7 @@ img {
 }
 
 /* ************** START box container ****************** */
-/* each page is put into a box container */
+/* each comic page is put into a box container */
 .box {
   position: sticky;
 	background-color: white;
@@ -35,6 +35,15 @@ img {
 	align-content: space-between;
 }
 /* ************** END box container ****************** */
+
+/* ************** START swim ****************** */
+.temp {
+
+	position: absolute;
+	/* border: dotted; */
+
+}
+/* ************** END swim ****************** */
 
 /* ************** START intro box ****************** */
 #intro {
@@ -263,10 +272,10 @@ img {
 }
 @keyframes rotate {
   from{
-    transform: rotateY(-180deg);
+    transform: rotateY(0deg);
   }
   to{
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
   }
 }
 .coin{
