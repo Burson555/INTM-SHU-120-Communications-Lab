@@ -1,10 +1,14 @@
-html {
+html, body {
   height: 100%;
+}
+
+img{
+  position: absolute;
+  display: block;
 }
 
 body {
   margin: 0;
-  height: 100%;
   font-family: Helvetica;
   /* color: #FFF; */
 }
@@ -133,7 +137,7 @@ height:0px;
   animation-name: move;
   /* animation-name: move 8s infinite 1s; */
 
-  animation-duration: 0.5s;
+  animation-duration: 5s;
   animation-delay: 1s;
   animation-iteration-count: infinite;
   /* animation-direction:reverse; */

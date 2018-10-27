@@ -1,0 +1,89 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#visuals {
+  float: left;
+  width: 85%;
+  height: 100%;
+}
+
+#controls {
+  float: right;
+  width: 15%;
+  height: 100%;
+  background-color: black;
+}
+
+#spinCircle {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 50px;
+  border-top-color: blue;
+  border-bottom-color: red;
+  border-left-color: green;
+  border-right-color: yellow;
+}
+
+#startCircle {
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  border-radius: 50%;
+  background-color: green;
+}
+
+#startCircle:hover {
+  background-color: white;
+}
+
+#volUp {
+  width: 0px;
+  margin: 50px auto;
+  border-width: 25px;
+  border-bottom-color: blue;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-style: solid;
+}
+
+#volUp:hover {
+  border-bottom-color: white;
+}
+
+#volDown {
+  width: 0px;
+  margin: 50px auto;
+  border-width: 25px;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-top-color: blue;
+  border-right-color: transparent;
+  border-style: solid;
+}
+
+#volDown:hover {
+  border-top-color: white;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes changeColor {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: hotpink;
+  }
+}
