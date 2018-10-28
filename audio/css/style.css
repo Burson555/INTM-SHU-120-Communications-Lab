@@ -3,19 +3,17 @@ body, html {
   margin: 0;
 	background-color: #17202A;
 }
-
-#texts, #controls {
-	display: flex;
-}
-
-#texts {
+/******************** window arrangement ********************/
+#contents {
   float: right;
   width: 80%;
-  height: 100%;
+  height: 6300px;
 	background-color: #000;
+	align-items: center;
 }
 
 #controls {
+	position: fixed;
   float: left;
   width: 19.79%;
   height: 100%;
@@ -24,4 +22,126 @@ body, html {
 	border-right: 0.2%;
 	border-right-style: solid;
 	border-color: #333;
+	align-items: center;
 }
+
+/******************** window arrangement ********************/
+
+/******************** control panel ********************/
+/* spinning circle */
+#spinCircle {
+	position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 12px;
+  border-top-color: #17202A;
+  border-left-color: #1C2833;
+	border-bottom-color: #202D3A;
+	border-right-color: #253442;
+}
+/* spinning animation */
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes changeColor1 {
+  from {
+    background-color: #17202A;
+  }
+  to {
+    background-color: #253442;
+  }
+}
+@keyframes changeColor2 {
+	from {
+		background-color: #253442;
+	}
+  to {
+    background-color: #17202A;
+  }
+}
+/* BGM play/pause buttons */
+#bgm1, #bgm2, #bgm3 {
+  width: 64px;
+  height: 64px;
+  /* margin: 50px; */
+  border-radius: 50%;
+  background-color: #17202A;
+	position: relative;
+	top: 2%;
+}
+#bgm1:hover {
+	background-color: #253442;
+}
+#bgm2:hover {
+	background-color: #253442;
+}
+#bgm3:hover {
+	background-color: #253442;
+}
+/* volume buttons */
+#volUp, #volDown {
+	position: relative;
+}
+#volUp {
+  width: 0px;
+  margin: 50px auto;
+  border-bottom-color: #17202A;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-style: solid;
+}
+#volUp:hover {
+  border-bottom-color: #253442;
+}
+#volDown {
+  width: 0px;
+  margin: 50px auto;
+  border-width: 25px;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-top-color: #17202A;
+  border-right-color: transparent;
+  border-style: solid;
+}
+#volDown:hover {
+  border-top-color: #253442;
+}
+/* volume bar */
+#volBar {
+	background-color: #17202A;
+	border: solid 2px #17202A;
+	position: relative;
+}
+#shadow {
+	background-color: black;
+}
+/******************** control panel ********************/
+
+/******************** text panel ********************/
+/* text box */
+#textBox {
+	position: fixed;
+	background-color: #202530;
+	/* background-color: black; */
+	width: 64%;
+	height: 60%;
+	right: 8%;
+	top: 20%;
+	text-align: center;
+}
+/* text */
+#text {
+	color: white;
+	/* font-size: 42px; */
+	position: relative;
+	top: 32%;
+}
+/******************** text panel ********************/

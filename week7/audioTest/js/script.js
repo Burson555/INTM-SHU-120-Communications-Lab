@@ -25,7 +25,7 @@ window.onload = function(){
 }
 
 function startBGM() {
-  if (playing) {
+  if (bgm.paused == false) {
     bgm.pause();
     bgmCircle.style.animationPlayState = "paused";
     startCircle.style.animation = null;
