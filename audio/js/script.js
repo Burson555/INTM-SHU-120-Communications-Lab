@@ -44,8 +44,8 @@ var openingTheme = document.getElementById("openingTheme");
 var whiteNoise = document.getElementById("whiteNoise");
 var environmental = document.getElementById("environmental");
   // to balance the volume among different audios
-var baseVolumes = [1, 0.3, 1];
-var volume = 0.6;
+var baseVolumes = [1, 0.2, 0.08];
+var volume = 0.8;
 var volumeStep = 0.06;
 var is1Playing = false;
 var is2Playing = false;
@@ -55,8 +55,6 @@ var soundList = [openingTheme, whiteNoise, environmental]
 for (var i = 0; i < 3; i ++){
   soundList[i].volume = baseVolumes[i] * volume;
 }
-
-console.log("openingTheme volume: " + openingTheme.volume);
 
 // START onload: change layouts *********************
 window.onload = function(){
@@ -124,7 +122,7 @@ window.onload = function(){
   volBarHeight = (volMargin + volWidth) * 1.5;
   volBar.style.height = volBarHeight + "px";
   shadowWidth = volBarWidth;
-  shadowHeight = 0.4 * volBarHeight;
+  shadowHeight = (1 - volume) * volBarHeight;
   shadow.style.width = shadowWidth + "px";
   shadow.style.height = shadowHeight + "px";
   volBarMoveRight = volBarWidth * 1.7;
@@ -167,6 +165,7 @@ function btn1Function(e) {
   introWindow.removeChild(intro);
   // document.body.removeChild(introWindow);
   bgm1Function();
+  bgm3Function();
   document.getElementsByClassName("title")[0].innerHTML = "One Hundred Years of Solitude";
   introWindow.style.width = "80%";
   bgm1.style.backgroundColor = "#253442";
@@ -325,17 +324,115 @@ function scrollFunction(e) {
       textBox.append(newText);
     }
 
-    // to change the BGM
-    // ************* codes *************
+    // to change the BGMusic
+    if ((pageNumber == 2) && (scrollDirection == 1)) {
+      if (openingTheme.paused == true){
+        openingTheme.src = "audio/peacefulMusic.mp3";
+      } else {
+        openingTheme.src = "audio/peacefulMusic.mp3";
+        openingTheme.play();
+      }
+    }
+    if ((pageNumber == 3) && (scrollDirection == 1)) {
+      if (openingTheme.paused == true){
+        openingTheme.src = "audio/crowdMusic.mp3";
+      } else {
+        openingTheme.src = "audio/crowdMusic.mp3";
+        openingTheme.play();
+      }
+    }
+    if ((pageNumber == 5) && (scrollDirection == 1)) {
+      if (openingTheme.paused == true){
+        openingTheme.src = "audio/peacefulMusic.mp3";
+      } else {
+        openingTheme.src = "audio/peacefulMusic.mp3";
+        openingTheme.play();
+      }
+    }
+    if ((pageNumber == 4) && (scrollDirection == 0)) {
+      if (openingTheme.paused == true){
+        openingTheme.src = "audio/crowdMusic.mp3";
+      } else {
+        openingTheme.src = "audio/crowdMusic.mp3";
+        openingTheme.play();
+      }
+    }
+    if ((pageNumber == 2) && (scrollDirection == 0)) {
+      if (openingTheme.paused == true){
+        openingTheme.src = "audio/peacefulMusic.mp3";
+      } else {
+        openingTheme.src = "audio/peacefulMusic.mp3";
+        openingTheme.play();
+      }
+    }
+    if ((pageNumber == 1) && (scrollDirection == 0)) {
+      if (openingTheme.paused == true){
+        openingTheme.src = "audio/openingTheme.mp3";
+      } else {
+        openingTheme.src = "audio/openingTheme.mp3";
+        openingTheme.play();
+      }
+    }
+    // to change the environmental sounds
+    if ((pageNumber == 3) && (scrollDirection == 1)) {
+      if (environmental.paused == true){
+        environmental.src = "audio/crowd.mp3";
+      } else {
+        environmental.src = "audio/crowd.mp3";
+        environmental.play();
+      }
+    }
+    if ((pageNumber == 4) && (scrollDirection == 1)) {
+      if (environmental.paused == true){
+        environmental.src = "audio/magnet.mp3";
+      } else {
+        environmental.src = "audio/magnet.mp3";
+        environmental.play();
+      }
+    }
+    if ((pageNumber == 5) && (scrollDirection == 1)) {
+      if (environmental.paused == true){
+        environmental.src = "audio/noSound.mp3";
+      } else {
+        environmental.src = "audio/noSound.mp3";
+        environmental.play();
+      }
+    }
+    if ((pageNumber == 4) && (scrollDirection == 0)) {
+      if (environmental.paused == true){
+        environmental.src = "audio/magnet.mp3";
+      } else {
+        environmental.src = "audio/magnet.mp3";
+        environmental.play();
+      }
+    }
+    if ((pageNumber == 3) && (scrollDirection == 0)) {
+      if (environmental.paused == true){
+        environmental.src = "audio/crowd.mp3";
+      } else {
+        environmental.src = "audio/crowd.mp3";
+        environmental.play();
+      }
+    }
+    if ((pageNumber == 2) && (scrollDirection == 0)) {
+      if (environmental.paused == true){
+        environmental.src = "audio/noSound.mp3";
+      } else {
+        environmental.src = "audio/noSound.mp3";
+        environmental.play();
+      }
+    }
   }
 }
+// END change page *********************
+
+// Erroe detection functions
 function showScrollY() {
   var y = window.scrollY;
   console.log("Y: " + y);
 }
-// END change page *********************
 
-var introText = "<br>This is an audible Internet novel<br>where environmental sounds and background music are added.<br><br>We suggest wearing headphones for better experience.<br><br>Since music will be played out<br>we would greatly appreciate it<br>if you check the volume level before starting it.<br><br><br>Click \"OK\" to start!<br><br>";
+var introText = "<br>This is an audible Internet novel<br>where environmental sounds and background music are added.<br><br>We suggest wearing headphones for better experience.<br><br>Since music will be played out<br>we would greatly appreciate it<br>if you check the volume level before starting it.<br><br><br>Click \"OK\" to start<br><br>";
 var instruction1Text = "<br>👈👈👈 On the left is the music control panel<br><br>&nbsp&nbsp&nbsp&nbsp&nbspClick circle button ⏺ to select sounds<br>&nbsp&nbsp&nbsp&nbsp&nbspClick triangle button 🔼🔽 to adjust volume<br><br>&nbsp&nbsp&nbsp&nbsp&nbspThere are 3 choices for sound<br>&nbsp&nbsp&nbsp&nbsp&nbspmusic, white noise, environmental sound<br>&nbsp&nbsp&nbsp&nbsp&nbspmusic and environmental sound are chosen by default";
 var instruction2Text = "<br>&nbsp&nbsp&nbsp&nbsp&nbspThis grey area on the right contains the novel content<br><br>&nbsp&nbsp&nbsp&nbsp&nbspScroll down to next page<br><br><br><br>&nbsp👈👈👈Click the button to get started";
 var textList = [" ", " ", " ", " ", " ", " ", " ", " "];
