@@ -74,6 +74,7 @@ body, html {
   border-radius: 50%;
   background-color: #17202A;
 	position: relative;
+	right: 25%;
 	top: 2%;
 }
 #bgm1:hover {
@@ -84,6 +85,13 @@ body, html {
 }
 #bgm3:hover {
 	background-color: #253442;
+}
+.bgmDes {
+	color: #17202A;
+	position: relative;
+	left: 45%;
+	bottom: 1.2%;
+	font-size: 20px;
 }
 /* volume buttons */
 #volUp, #volDown {
@@ -129,19 +137,74 @@ body, html {
 /* text box */
 #textBox {
 	position: fixed;
-	background-color: #202530;
-	/* background-color: black; */
+	/* background-color: #202530; */
+	background-color: #000;
 	width: 64%;
 	height: 60%;
 	right: 8%;
 	top: 20%;
-	text-align: center;
 }
-/* text */
-#text {
-	color: white;
-	/* font-size: 42px; */
+/* title */
+.title {
+	/* color: white; */
+	color: #D6DBDF;
+	font-size: 42px;
 	position: relative;
 	top: 32%;
+	text-align: center;
+
+}
+/* text */
+.text {
+	font-family: Helvetica;
+	/* color: white; */
+	color: #D6DBDF;
+	font-size: 28px;
+	position: relative;
+	text-align: center;
 }
 /******************** text panel ********************/
+
+/******************** intro page ********************/
+#btn1 {
+	width: 12%;
+	height: 8%;
+	background-color: #17202A;
+	color: white;
+	font-size: 24px;
+	border: solid 2px white;
+}
+.instruction {
+	font-family: Helvetica;
+	color: white;
+	font-size: 21px;
+	position: relative;
+}
+#instruction1 {
+	width: 48%;
+	height: 32%;
+	position: relative;
+	background-color: #253442;
+	left: 1%;
+	top: 2%;
+}
+#instruction2 {
+	width: 48%;
+	height: 30%;
+	position: absolute;
+	background-color: #253442;
+	bottom: 10%;
+	right: 1%;
+}
+#btn2 {
+	width: 12%;
+	height: 8%;
+	background-color: #253442;
+	color: white;
+	font-size: 24px;
+	border: solid 2px white;
+	position: absolute;
+	bottom: 13%;
+	left: 20%;
+}
+/******************** intro page ********************/

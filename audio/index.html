@@ -1,3 +1,15 @@
+<!--
+Project Description
+
+In groups of two, create a webpage that features audio collage. The audio should be the main focus of your page. The visuals and design should be in support of the audio.
+
+The audio can be a single edited composition or numerous sounds or compositions collaged or sequenced through user interaction. You can use self-recorded or pre-recorded audio.
+
+There must be intention and a concept. This piece could be environmental, musical, create space or mood, or tell a story through sound.
+
+Create an audio project combining recorded audio and other sources at least 1 minute in length.
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +19,7 @@
 <style></style>
 </head>
 
-<body onscroll="showScrollPosition()">
+<body onscroll = "scrollFunction()">
 
   <div id = "controls">
     <div id = "spinCircle">
@@ -16,9 +28,22 @@
       <audio id = "openingTheme" src="audio/OpeningTheme01.mp3" type = "audio/mpeg">
       </audio>
     </div>
+    <div class = "bgmDes">
+      <b>Muisc</b>
+    </div>
     <div id = "bgm2">
+      <audio id = "whiteNoise" src="audio/whiteNoise.mp3" type = "audio/mpeg">
+      </audio>
+    </div>
+    <div class = "bgmDes">
+      <b>White Noise</b>
     </div>
     <div id = "bgm3">
+      <audio id = "environmental" src="audio/OpeningTheme02.mp3" type = "audio/mpeg">
+      </audio>
+    </div>
+    <div class = "bgmDes">
+      <b>Environmental</b>
     </div>
     <div id = "volUp">
     </div>
@@ -32,8 +57,8 @@
 
   <div id = "contents">
     <div class = "fixedBox" id = "textBox">
-      <!-- <p id = "text">One Hundred Years of Solitude</p> -->
-      <h1 id = "text">One Hundred Years of Solitude</h1>
+      <!-- <p class = "text">One Hundred Years of Solitude</p> -->
+      <h1 class = "title"></h1>
     </div>
   </div>
 
