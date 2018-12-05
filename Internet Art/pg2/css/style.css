@@ -1,0 +1,37 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  margin: 0;
+}
+/******************** window arrangement ********************/
+#title {
+	/* background-color: #C00; */
+  background-color: #17202A;
+  /* background-color: #1C2833; */
+  /* background-color: #202D3A; */
+  /* background-color: #253442; */
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+
+#videoContainer {
+	/* background-color: #0C0; */
+  background-color: #253442;
+  text-align: center;
+}
+
+#controls {
+	/* background-color: #00C; */
+  background-color: #17202A;
+  /* background-color: #1C2833; */
+  /* background-color: #202D3A; */
+  /* background-color: #253442; */
+  display: flex;
+}
+
+.box {
+  background-color: white;
+}
+/******************** window arrangement ********************/

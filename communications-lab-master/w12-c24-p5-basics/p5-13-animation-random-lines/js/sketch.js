@@ -1,11 +1,11 @@
 function setup() {
   createCanvas(500, 600);
-  background(0);
+  // background(0);
 }
 
 
 function draw() {
-  //background(0);
+  background(0);
 
   var x1 = random(width);
   var y1 = random(height);
