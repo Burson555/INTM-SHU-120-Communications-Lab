@@ -22,6 +22,10 @@ body, html {
   text-align: center;
 }
 
+#video {
+  filter: hue-rotate(0deg);
+}
+
 #controls {
 	/* background-color: #000; */
   background-color: #17202A;
@@ -33,6 +37,10 @@ body, html {
 
 .box {
   /* background-color: white; */
+  color: #EBEDEF;
+  /* color: white; */
+  font-size: 36px;
+  text-align: center;
 }
 #box1 {
   background-color: #281E17;
@@ -47,13 +55,13 @@ body, html {
   background-color: #4F3923;
 }
 #box5 {
-  background-color: #4B4027;
+  background-color: #584232;
 }
 #box6 {
   background-color: #58583C;
 }
 #box7 {
-  background-color: #584232;
+  background-color: #4B4027;
 }
 #box8 {
   background-color: #323C4D;

@@ -1,4 +1,5 @@
 var i;
+var localTime;
 
 // page layouts
 var width = window.innerWidth;
@@ -64,43 +65,58 @@ window.onload = function(){
 // END layouts *********************
 
 
-// START box hover *********************
-box1.addEventListener("mouseover", musicFunc1);
-box2.addEventListener("mouseover", musicFunc2);
-box3.addEventListener("mouseover", musicFunc3);
-box4.addEventListener("mouseover", musicFunc4);
-box5.addEventListener("mouseover", musicFunc5);
-box6.addEventListener("mouseover", musicFunc6);
-box7.addEventListener("mouseover", musicFunc7);
-box8.addEventListener("mouseover", musicFunc8);
-box9.addEventListener("mouseover", musicFunc9);
-function musicFunc1(){console.log(1);};
-function musicFunc2(){console.log(2);};
-function musicFunc3(){console.log(3);};
-function musicFunc4(){console.log(4);};
-function musicFunc5(){console.log(5);};
-function musicFunc6(){console.log(6);};
-function musicFunc7(){console.log(7);};
-function musicFunc8(){console.log(8);};
-function musicFunc9(){console.log(9);};
-// END box hover *********************
-
-// START keypress *********************
-document.body.addEventListener("keypress", keyPressFunc);
+// START music and color functions *********************
+function addFilter1(){video.style.filter = "hue-rotate(0deg)";};
+function addFilter2(){video.style.filter = "hue-rotate(40deg)";};
+function addFilter3(){video.style.filter = "hue-rotate(80deg)";};
+function addFilter4(){video.style.filter = "hue-rotate(120deg)";};
+function addFilter5(){video.style.filter = "hue-rotate(160deg)";};
+function addFilter6(){video.style.filter = "hue-rotate(200deg)";};
+function addFilter7(){video.style.filter = "hue-rotate(240deg)";};
+function addFilter8(){video.style.filter = "hue-rotate(280deg)";};
+function addFilter9(){video.style.filter = "hue-rotate(320deg)";};
+function MscAndFlt1(){ msc1.play(); addFilter1();};
+function MscAndFlt2(){ msc2.play(); addFilter2();};
+function MscAndFlt3(){ msc3.play(); addFilter3();};
+function MscAndFlt4(){ msc4.play(); addFilter4();};
+function MscAndFlt5(){ msc5.play(); addFilter5();};
+function MscAndFlt6(){ msc6.play(); addFilter6();};
+function MscAndFlt7(){ msc7.play(); addFilter7();};
+function MscAndFlt8(){ msc8.play(); addFilter8();};
+function MscAndFlt9(){ msc9.play(); addFilter9();};
 function keyPressFunc(){
   var x = event.key;
   switch (x) {
-    case "a": console.log(1); break;
-    case "s": console.log(2); break;
-    case "d": console.log(3); break;
-    case "f": console.log(4); break;
-    case "g": console.log(5); break;
-    case "h": console.log(6); break;
-    case "j": console.log(7); break;
-    case "k": console.log(8); break;
-    case "l": console.log(9); break;
+    case "a": MscAndFlt1(); break;
+    case "s": MscAndFlt2(); break;
+    case "d": MscAndFlt3(); break;
+    case "f": MscAndFlt4(); break;
+    case "g": MscAndFlt5(); break;
+    case "h": MscAndFlt6(); break;
+    case "j": MscAndFlt7(); break;
+    case "k": MscAndFlt8(); break;
+    case "l": MscAndFlt9(); break;
     default:
       break;
   }
 };
-// END keypress *********************
+document.body.addEventListener("keypress", keyPressFunc);
+// box1.addEventListener("mouseover", musicFunc1);
+// box2.addEventListener("mouseover", musicFunc2);
+// box3.addEventListener("mouseover", musicFunc3);
+// box4.addEventListener("mouseover", musicFunc4);
+// box5.addEventListener("mouseover", musicFunc5);
+// box6.addEventListener("mouseover", musicFunc6);
+// box7.addEventListener("mouseover", musicFunc7);
+// box8.addEventListener("mouseover", musicFunc8);
+// box9.addEventListener("mouseover", musicFunc9);
+box1.addEventListener("mouseover", addFilter1);
+box2.addEventListener("mouseover", addFilter2);
+box3.addEventListener("mouseover", addFilter3);
+box4.addEventListener("mouseover", addFilter4);
+box5.addEventListener("mouseover", addFilter5);
+box6.addEventListener("mouseover", addFilter6);
+box7.addEventListener("mouseover", addFilter7);
+box8.addEventListener("mouseover", addFilter8);
+box9.addEventListener("mouseover", addFilter9);
+// END music and color functions *********************
