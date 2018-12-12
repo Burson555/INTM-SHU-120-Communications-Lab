@@ -116,7 +116,7 @@ function fixFilterFunc(){
 }
 function okBttFunction(e) {
   document.body.removeChild(instruction);
-  bgm.volume = 0.2;
+  bgm.volume = 0.12;
   bgm.play();
 }
 // END layouts *********************
