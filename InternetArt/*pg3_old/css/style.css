@@ -1,0 +1,72 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  margin: 0;
+}
+/******************** window arrangement ********************/
+#title {
+	/* background-color: #C00; */
+  background-color: #17202A;
+  /* background-color: #1C2833; */
+  /* background-color: #202D3A; */
+  /* background-color: #253442; */
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+
+#videoContainer {
+	/* background-color: #000; */
+  background-color: #253442;
+  text-align: center;
+}
+
+#video {
+  filter: hue-rotate(0deg);
+}
+
+#controls {
+	/* background-color: #000; */
+  background-color: #17202A;
+  /* background-color: #1C2833; */
+  /* background-color: #202D3A; */
+  /* background-color: #253442; */
+  display: flex;
+}
+
+.box {
+  /* background-color: white; */
+  color: #EBEDEF;
+  /* color: white; */
+  font-size: 36px;
+  text-align: center;
+}
+#box1 {
+  background-color: #65613E;
+}
+#box2 {
+  background-color: #686951;
+}
+#box3 {
+  background-color: #979A87;
+}
+#box4 {
+  background-color: #BDBA9E;
+}
+#box5 {
+  background-color: #A79C87;
+}
+#box6 {
+  background-color: #857B64;
+}
+#box7 {
+  background-color: #665B45;
+}
+#box8 {
+  background-color: #4E412F;
+}
+#box9 {
+  background-color: #403D3D;
+}
+/******************** window arrangement ********************/

@@ -1,0 +1,172 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  margin: 0;
+}
+/******************** window arrangement ********************/
+#title {
+	/* background-color: #C00; */
+  /* background-color: #17202A; */
+  background-color: #1C2833;
+  /* background-color: #202D3A; */
+  /* background-color: #253442; */
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+
+#mask{
+  /* opacity: 1; */
+  opacity: 0.6;
+  position: absolute;
+}
+
+#videoContainer {
+	/* background-color: #000; */
+  /* background-color: #253442; */
+  /* background-color: #2C3E50; */
+  background-color: #34495E;
+  /* background-color: #566573; */
+  text-align: center;
+}
+
+#video {
+  /* filter: hue-rotate(0deg); */
+  background-color: black;
+}
+
+.btt{
+  background-color: white;
+  position: absolute;
+}
+#infoPage{
+  background-color: #85929E;
+}
+#noFilter{
+  background-color: #85929E;
+}
+#fixFilter{
+  background-color: #85929E;
+}
+
+#controls {
+	/* background-color: #000; */
+  /* background-color: #17202A; */
+  background-color: #1C2833;
+  /* background-color: #202D3A; */
+  /* background-color: #253442; */
+  display: flex;
+}
+
+.box {
+  /* background-color: white; */
+  color: #EBEDEF;
+  /* color: white; */
+  font-size: 36px;
+  text-align: center;
+}
+#box1 {
+  background-color: #65613E;
+}
+#box2 {
+  background-color: #686951;
+}
+#box3 {
+  background-color: #979A87;
+}
+#box4 {
+  background-color: #BDBA9E;
+}
+#box5 {
+  background-color: #A79C87;
+}
+#box6 {
+  background-color: #857B64;
+}
+#box7 {
+  background-color: #665B45;
+}
+#box8 {
+  background-color: #4E412F;
+}
+#box9 {
+  background-color: #403D3D;
+}
+/******************** window arrangement ********************/
+
+/* ******************************* */
+#instruction {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #85929E;
+  opacity: 0.6;
+}
+#okBtt {
+	width: 10%;
+	height: 32px;;
+	background-color: white;
+	color: navy;
+	font-size: 32px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+	border: solid 5px navy;
+  text-align: center;
+	position: absolute;
+	bottom: 20%;
+	right: 2%;
+}
+#buttonBox {
+  width: 80%;
+  /* height left to javascript */
+  /* height: 20%; */
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  border: solid 5px navy;
+  background-color: white;
+}
+#buttonText{
+  position: absolute;
+  width: 65%;
+  left: 20%;
+  color: yellow;
+  font-size: 28px;
+  height: 28px;
+}
+#videoText{
+  position: absolute;
+  width: 80%;
+  top: 30%;
+  left: 20%;
+  color: yellow;
+  font-size: 28px;
+  height: 28px;
+}
+#infoPageIns{
+  position: absolute;
+  width: 225px;
+  color: yellow;
+  font-size: 25px;
+  height: 25px;
+  text-align: right;
+}
+#noFilterIns{
+  position: absolute;
+  width: 225px;
+  color: yellow;
+  font-size: 25px;
+  height: 25px;
+  text-align: right;
+}
+#fixFilterIns{
+  position: absolute;
+  width: 225px;
+  color: yellow;
+  font-size: 25px;
+  height: 25px;
+  text-align: right;
+}
